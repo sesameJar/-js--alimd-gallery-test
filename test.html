@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+	<style type="text/css">
+		*{
+			-webkit-transition: all 200ms;
+		}
+		.left{
+			float: left;
+		}
+		.ml{
+			margin-left:130px;
+		}
+		div#wrapper{
+			height:256px;
+			width: 225px;
+		}
+		section.row1{
+			width:225px;
+			height:75px;
+			background-color: gray;
+		}
+		section.row1 div.box1{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+			
+		}
+		section.row1 div.box2{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+			
+		}
+		section.row1 div.box3{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+			
+		}
+		section.row2{
+			width:225px;
+			height:75px;
+			background-color: gray;
+		}
+		section.row2 div.bo1{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+			
+		}
+		section.row2 div.bo2{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+			
+		}
+		section.row2 div.bo3{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+			
+		}
+
+		section.row3{
+			width:225px;
+			height:75px;
+			background-color: gray;
+		}
+		section.row3 div.box1{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+		}
+		section.row3 div.box2{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+		}
+		section.row3 div.box3{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+		}
+		section.row4{
+			width:225px;
+			height:75px;
+			background-color: gray;
+		}
+		section.row4 div.box1{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+			
+		}
+		section.row4 div.box2{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+			
+		}
+		section.row4 div.box3{
+			position: relative;
+			width: 64px;
+			height:64px;
+			margin-bottom: 20px;
+			
+		}
+		div.box1 img{
+			width: 64px;
+			height: 64px;
+			position: absolute;
+			left:0;
+			top:0;
+		}
+		div.box2 img{
+			width: 64px;
+			height: 64px;
+			position: absolute;
+			left:0;
+			top:0;
+		}
+		div.box3 img{
+			width: 64px;
+			height: 64px;
+			position: absolute;
+			left:0;
+			top:0;
+		}
+	</style>
+	<script type="text/javascript">
+		function randPlace(){
+
+			return Math.round(Math.random()*100);
+
+		}
+		window.onload=function(){
+			var wrap = document.getElementById('wrapper');
+			var rows = document.getElementById('wrapper').getElementsByClassName('move');
+
+			wrap.onmousemove=function(){
+				for(var i=0;i<rows.length;i++){
+					rows.item(i).style.left=randPlace()+"px";
+					rows.item(i).style.top=randPlace()+"px";
+				}
+			}
+			
+		}
+
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<section class ="row1">
+			<div class ="box1 left"><img src="images/flickr.jpg" alt=""></div>
+			<div class ="box2 left"><img src="images/vimeo.jpg" alt=""></div>
+			<div class ="box3 ml"><img src="images/facebook.jpg" alt=""></div>
+		</section>
+		<section class ="row2">
+			<div class ="box1 left"><img src="images/twitter.jpg" alt=""></div>
+			<div class ="box2 left"><img src="images/ember.jpg" alt=""></div>
+			<div class ="box3 ml"><img src="images/google.jpg" alt=""></div>
+		</section>
+		<section class ="row3">
+			<div class ="box1 left"><img src="images/delicious.jpg" alt=""></div>
+			<div class ="box2 left"><img src="images/skype.jpg" alt=""></div>
+			<div class ="box3 ml"><img src="images/dribbble.jpg" alt=""></div>
+		</section>
+		<section class ="row4">
+			<div class ="box1 left"><img src="images/last_fm.jpg" alt=""></div>
+			<div class ="box2 left"><img src="images/stumbleupon.jpg" alt=""></div>
+			<div class ="box3 ml"><img src="images/rss.jpg" alt=""></div>
+		</section>
+	</div>
+</body>
+</html>
