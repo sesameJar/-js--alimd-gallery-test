@@ -5,7 +5,7 @@
 	<title></title>
 	<style type="text/css">
 		*{
-			-webkit-transition: all 200ms;
+			-webkit-transition: all 550ms;
 		}
 		.left{
 			float: left;
@@ -17,16 +17,24 @@
 			height:256px;
 			width: 225px;
 		}
+		div#wrapper div{
+			opacity: 0.9;
+			-moz-opacity: 0.9;
+			filter:alpha(opacity=9);
+		}
 		section.row1{
 			width:225px;
 			height:75px;
 			background-color: gray;
 		}
+		
 		section.row1 div.box1{
 			position: relative;
 			width: 64px;
 			height:64px;
 			margin-bottom: 20px;
+
+
 			
 		}
 		section.row1 div.box2{
@@ -48,21 +56,21 @@
 			height:75px;
 			background-color: gray;
 		}
-		section.row2 div.bo1{
+		section.row2 div.box1{
 			position: relative;
 			width: 64px;
 			height:64px;
 			margin-bottom: 20px;
 			
 		}
-		section.row2 div.bo2{
+		section.row2 div.box2{
 			position: relative;
 			width: 64px;
 			height:64px;
 			margin-bottom: 20px;
 			
 		}
-		section.row2 div.bo3{
+		section.row2 div.box3{
 			position: relative;
 			width: 64px;
 			height:64px;
@@ -142,19 +150,17 @@
 		}
 	</style>
 	<script type="text/javascript">
-		function randPlace(){
-
-			return Math.round(Math.random()*100);
-
-		}
+		function rnd(a,b){
+	return Math.floor(Math.random()*(b-a+1))+a;
+}
 		window.onload=function(){
 			var wrap = document.getElementById('wrapper');
 			var rows = document.getElementById('wrapper').getElementsByClassName('move');
-
-			wrap.onmousemove=function(){
-				for(var i=0;i<rows.length;i++){
-					rows.item(i).style.left=randPlace()+"px";
-					rows.item(i).style.top=randPlace()+"px";
+for(var i=0;i<rows.length;i++){
+			rows.item(i).onmousemove=function(){
+				
+					this.style.left=rnd(-10,10)+"px";
+					this.style.top=rnd(-10,10)+"px";
 				}
 			}
 			
@@ -165,24 +171,24 @@
 <body>
 	<div id="wrapper">
 		<section class ="row1">
-			<div class ="box1 left"><img src="images/flickr.jpg" alt=""></div>
-			<div class ="box2 left"><img src="images/vimeo.jpg" alt=""></div>
-			<div class ="box3 ml"><img src="images/facebook.jpg" alt=""></div>
+			<div id="box1" class ="box1 left move"><img src="images/flickr.jpg" alt=""></div>
+			<div class ="box2 left move"><img src="images/vimeo.jpg" alt=""></div>
+			<div class ="box3 ml move"><img src="images/facebook.jpg" alt=""></div>
 		</section>
 		<section class ="row2">
-			<div class ="box1 left"><img src="images/twitter.jpg" alt=""></div>
-			<div class ="box2 left"><img src="images/ember.jpg" alt=""></div>
-			<div class ="box3 ml"><img src="images/google.jpg" alt=""></div>
+			<div class ="box1 left move"><img src="images/twitter.jpg" alt=""></div>
+			<div class ="box2 left move"><img src="images/ember.jpg" alt=""></div>
+			<div class ="box3 ml move"><img src="images/google.jpg" alt=""></div>
 		</section>
 		<section class ="row3">
-			<div class ="box1 left"><img src="images/delicious.jpg" alt=""></div>
-			<div class ="box2 left"><img src="images/skype.jpg" alt=""></div>
-			<div class ="box3 ml"><img src="images/dribbble.jpg" alt=""></div>
+			<div class ="box1 left move"><img src="images/delicious.jpg" alt=""></div>
+			<div class ="box2 left move"><img src="images/skype.jpg" alt=""></div>
+			<div class ="box3 ml move"><img src="images/dribbble.jpg" alt=""></div>
 		</section>
 		<section class ="row4">
-			<div class ="box1 left"><img src="images/last_fm.jpg" alt=""></div>
-			<div class ="box2 left"><img src="images/stumbleupon.jpg" alt=""></div>
-			<div class ="box3 ml"><img src="images/rss.jpg" alt=""></div>
+			<div class ="box1 left move"><img src="images/last_fm.jpg" alt=""></div>
+			<div class ="box2 left move"><img src="images/stumbleupon.jpg" alt=""></div>
+			<div class ="box3 ml move"><img src="images/rss.jpg" alt=""></div>
 		</section>
 	</div>
 </body>
