@@ -1,0 +1,40 @@
+/*
+ * Gallery v1
+ * ali.md/wd
+ */
+
+@charset "UTF-8";
+
+body{
+	background-color: #001;
+}
+
+div.container{
+	width: 950px;
+	margin: 0 auto;
+}
+
+div.gallery{
+	position: relative;
+}
+
+div.gallery a{
+	display: block;
+	position: absolute;
+	left:250px;
+	top:185px;
+	border:solid white;
+	border-width: 6px 6px 40px 6px;
+	border-radius: 2px;
+	opacity: 0;
+	z-index: 1;
+}
+
+div.gallery a:hover{
+	z-index:2;
+	opacity: 0.98;
+}
+
+div.gallery img{
+	display: block;
+}
